@@ -26,7 +26,7 @@ class MyFile:
         a = requests.get(self.path_or_name).text
         b = a.split(" ")
         for i in b:
-             if i[:4] == "href":
+             if i[:10] == 'href="http':
                   cnt += 1
         return cnt
     
