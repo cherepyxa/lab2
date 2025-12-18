@@ -25,9 +25,11 @@ try:
             x_coords.append(i[2][5:])
             y_coords.append(i[3])
     print(summ/cnt)
+    y = sorted(y_coords)
 except:
     print("формат данных не подходит")
 try:
+    plt.plot(x_coords, y, alpha=0)
     plt.plot(x_coords, y_coords)
     plt.title("Средняя пенсия за 2018 год")
     plt.xlabel("Дата")
